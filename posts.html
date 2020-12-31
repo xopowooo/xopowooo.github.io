@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+
+<h4 style="margin-top:1rem;margin-bottom:1rem" class="post_title_in_posts"><a
+        href="{{ post.url }}">{{ post.title | strip_html | truncate:50 }}</a>
+</h4>
+
+<div>
+    {% if post.tags != nil %}
+    {% assign post_tags = post.tags | uniq | sort %}
+    {% for tag in post_tags %}
+    <button class="btn-tag" disabled>{{ tag }}</button>
+    {% endfor %}
+    {% endif %}
+</div>
+
+<p style="margin-bottom:0px;">
+    {% assign first_para = post.content | strip | newline_to_br | split: "<br />" %}
+    {{ first_para[0] | strip | strip_html | truncate:200 | default: "(no preview)" }}</p>
+<p style="text-align:right; font-size:14px;">{{ post.date | date: "%b %d (%a), %Y. %H:%M %p." }}</p>
+
+{% unless forloop.last %}
+{% endunless %}
+
+{% endfor %}

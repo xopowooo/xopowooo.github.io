@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% if page.title != nil %}
+
+<h1 style="margin-top:80px;margin-bottom:5px">{{ page.title }}</h1>
+
+<div>
+    {% if page.tags != nil %}
+    {% assign page_tags = page.tags | uniq | sort %}
+    {% for tag in page_tags %}
+    <button class="btn-tag" disabled>{{ tag }}</button>
+    {% endfor %}
+    {% endif %}
+</div>
+
+<p style="font-size:14px;"><span>{{ page.date | date: "%b %d (%a), %Y. %H:%M %p." }}</span> by
+    <span>{{ page.author | default: "小佳" }}</span></p>
+
+<hr style="width:50%; margin-bottom:60px" />
+
+{% endif %}
+
+{{ content }}
