@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "教程"
 author: 小江
 date:   2020-12-31 00:00:00 +0800

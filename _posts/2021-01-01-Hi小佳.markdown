@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Hi 小佳"
 author: 小江
 date:   2021-01-01 00:00:01 +0800
