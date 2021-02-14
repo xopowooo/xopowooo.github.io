@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# bundle exec jekyll serve --safe # 启动服务（本地debug）
+# bundle exec jekyll build # 生成静态网页文件（用于上传）
+
+
 echo "start generating files..."
 
 posts_dir="./_posts"
