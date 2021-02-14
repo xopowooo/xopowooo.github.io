@@ -54,24 +54,48 @@
 </style>
 
 
+{% if page.nav != nil %}
+    {% if page.nav contains "_ru" %}
+        {% assign lang = "ru" %}
+    {% elsif page.nav contains "_zh" %}
+        {% assign lang = "zh" %}
+    {% else %}
+        {% assign lang = "en" %}
+    {% endif %}
+    
+    {% assign page_type = page.nav | remove: "_ru" | remove: "_zh" | remove: "_en" | remove: ".html" %}
+    {% assign ru_switch = "/" | append: page_type | append:  "_ru.html" %}
+    {% assign zh_switch = "/" | append: page_type | append:  "_zh.html" %}
+    {% assign en_switch = "/" | append: page_type | append:  ".html" %}
+
+{% endif %}
+
+
 <body class="code-snippets-visible">
+
+    {% if page.layout != "post"%}
+    <div class="row" style="margin-top:20px">
+        <div class="ten columns">&nbsp;</div>
+        <div class="two columns post_title_in_posts"><a href={{ ru_switch }}>РУ</a> | <a href={{ zh_switch }}>中</a> | <a href={{ en_switch }}>EN</a></div>
+    </div>
+    {% endif %}
 
     <div style="position:relative; min-height:100vh;">
         <div class="container">
 
+            
             {% if page.layout != "post" %}
             <section class="header">
 
                 <div class="row">
                     <div id="avatar" class="three columns">
-                        <a href="/"><img class="u-max-full-width"
+                        <a href="#"><img class="u-max-full-width"
                                 src={{ "/assets/avatar.JPG" | prepend: site.baseurl }}></a>
                     </div>
                     <div class="nine columns ">
-                        <h1>{{ site.name | strip | strip_html }}</h1>
-                        <!-- Ли Цзяцзя -->
-                        <p>{{ site.title_institution | strip | strip_html }}</p>
-                        <p>{{ site.place | strip | strip_html }}</p>
+                        <h1>{{ site.data.langs[lang].avatar_name | strip | strip_html }}</h1>
+                        <p>{{ site.data.langs[lang].avatar_title_institution | strip | strip_html }}</p>
+                        <p>{{ site.data.langs[lang].avatar_place | strip | strip_html }}</p>
                         <p>{{ site.email | strip | strip_html }}</p>
                     </div>
                 </div>
@@ -83,21 +107,20 @@
             <nav class="navbar">
                 <div class="container">
                     <ul class="navbar-list">
-                        <li class="navbar-item"><a class="navbar-link" href="/">Intro</a></li>
-                        <li class="navbar-item"><a class="navbar-link" href="/posts.html">Posts</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href={{ site.data.langs[lang].nav_intro_url }}>{{ site.data.langs[lang].nav_intro_name }}</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href={{ site.data.langs[lang].nav_posts_url }}>{{ site.data.langs[lang].nav_posts_name }}</a></li>
                         <li class="navbar-item">
-                            <a class="navbar-link" href="/" data-popover="#moreNavPopover">More</a>
+                            <a class="navbar-link" href="/" data-popover="#moreNavPopover">{{ site.data.langs[lang].nav_more_name }}</a>
                             <div id="moreNavPopover" class="popover" style="z-index: 1;">
                                 <ul class="popover-list">
                                     <li class="popover-item">
-                                        <a class="popover-link" href="/">Pub Browser</a>
+                                        <a class="popover-link" href={{ site.data.langs[lang].nav_more_pubbrowser_url }}>{{ site.data.langs[lang].nav_more_pubbrowser_name }}</a>
                                     </li>
                                     <li class="popover-item">
-                                        <a class="popover-link" href="/">Lang
-                                            Map</a>
+                                        <a class="popover-link" href={{ site.data.langs[lang].nav_more_langmap_url }}>{{ site.data.langs[lang].nav_more_langmap_name }}</a>
                                     </li>
                                     <li class="popover-item">
-                                        <a class="popover-link" href="/">Word Dict</a>
+                                        <a class="popover-link" href={{ site.data.langs[lang].nav_more_worddict_url }}>{{ site.data.langs[lang].nav_more_worddict_name }}</a>
                                     </li>
                                 </ul>
                             </div>

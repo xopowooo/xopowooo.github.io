@@ -1,31 +1,9 @@
 ---
 layout: default
-nav: "index.html"
+nav: "index_zh.html"
 ---
 
-<!-- 
-
-<iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
-
-Научный руководитель: (Supervisor:)
-Профессор кафедры общего и сравнитель-но-исторического языкознания, 
-доктор филологических наук
-С.Н. Кузнецов
-
-Московский государственный университет имени М.В. Ломоносова
-Филологический факультет
-
-Faculty of Philology
-
-Кузнецов Сергей Николаевич
-
-МГУ имени М.В. Ломоносова
-
-Кафедра общего и сравнительно-исторического языкознания -->
-
-
-
-### Hi
+### 你好
 I am currently a philology Ph.D. student at Lomonosov Moscow State University under the supervision of Prof. [Sergey N. Kuznetsov](http://genhis.philol.msu.ru/kuznecov-sergej-nikolaevich-professor-doktor-filologicheskix-nauk/).
 Prior to that, I obtained my M.A. and B.A. at [MSU](https://www.msu.ru/index.php) in 2019 and at [XISU](https://www.xisu.edu.cn/) in 2017, respectively.
 
@@ -33,19 +11,19 @@ My current research focuses on comparative historical linguistics. Besides, I am
 
 
 
-### Education
+### 教育
 - 2019.09-now, **Ph.D. student**, *Faculty of Philology*, Lomonosov Moscow State University
 - 2017.08-2019.07, **Master**, *The Higher School of Translation/Interpreting*, Lomonosov Moscow State University
 - 2013.08-2017.07, **Bachelor**, *School of Russian Studies*, Xi'An International Studies University
 
 
 
-### Publications
+### 论文
 - <u>Jiajia Li</u>. **Характер В. В. Путина и его влияния на общественные и политические деятельности**. Xi'An International Studies University. 2017. [\[PDF\]](#)
 
 
 
-### Experience
+### 经历
 - Translation &nbsp; (event) &nbsp;&nbsp; 2020.12.12
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -54,11 +32,11 @@ My current research focuses on comparative historical linguistics. Besides, I am
 
 
 
-### Teaching
+### 教学
 - lorem ipsum dolor sit amet
 
 
 
-### Honors
+### 荣誉
 - 2020.12, lorem ipsum dolor sit amet
 - 2020.12, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua

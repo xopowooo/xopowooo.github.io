@@ -1,0 +1,51 @@
+
+ru:
+  avatar_name : Ли Цзяцзя
+  avatar_title_institution: Кандидат наук. студент. Филологический факультет
+  avatar_place: Московский государственный университет им. М. В. Ломоносова. Россия
+
+  nav_intro_name: "ГЛАВНАЯ"
+  nav_intro_url: "/index_ru.html"
+  nav_posts_name: "СООБЩЕНИЯ"
+  nav_posts_url: "/posts_ru.html"
+  nav_more_name: "БОЛЬШЕ"
+  nav_more_pubbrowser_url: "#"
+  nav_more_pubbrowser_name: "ПУБ ПОИСК"
+  nav_more_langmap_url: "#"
+  nav_more_langmap_name: "ЯЗЫКОВАЯ КАРТА"
+  nav_more_worddict_url: "#"
+  nav_more_worddict_name: "ТОЛКОВЫЙ СЛОВАРЬ"
+
+zh:
+  avatar_name: 李佳佳
+  avatar_title_institution: 博士生. 语言学系
+  avatar_place: 罗蒙诺索夫莫斯科国立大学. 俄罗斯
+
+  nav_intro_name: "首页"
+  nav_intro_url: "/index_zh.html"
+  nav_posts_name: "博文"
+  nav_posts_url: "/posts_zh.html"
+  nav_more_name: "更多"
+  nav_more_pubbrowser_url: "#"
+  nav_more_pubbrowser_name: "文献搜索"
+  nav_more_langmap_url: "#"
+  nav_more_langmap_name: "语言地图"
+  nav_more_worddict_url: "#"
+  nav_more_worddict_name: "语言词典"
+
+en: 
+  avatar_name: Jiajia Li
+  avatar_title_institution: Ph.D. Student, Faculty of Philology
+  avatar_place: Lomonosov Moscow State University. Russia
+
+  nav_intro_name: "INTRO"
+  nav_intro_url: "/"
+  nav_posts_name: "POSTS"
+  nav_posts_url: "/posts.html"
+  nav_more_name: "MORE"
+  nav_more_pubbrowser_url: "#"
+  nav_more_pubbrowser_name: "PUB BROWSER"
+  nav_more_langmap_url: "#"
+  nav_more_langmap_name: "LANG MAP"
+  nav_more_worddict_url: "#"
+  nav_more_worddict_name: "WORD DICT"

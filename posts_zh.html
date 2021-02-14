@@ -1,9 +1,9 @@
 ---
 layout: default
-nav: "posts.html"
+nav: "posts_zh.html"
 ---
 
-{% assign selected_posts = site.posts | where: 'nav', "post.html"  %}
+{% assign selected_posts = site.posts | where: 'nav', "post_zh.html"  %}
 {% assign sorted_posts = selected_posts | sort:"top","last" %}
 {% for post in sorted_posts %}
 
