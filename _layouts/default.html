@@ -54,20 +54,13 @@
 </style>
 
 
+{% include lang_detect.html %}
+
 {% if page.nav != nil %}
-    {% if page.nav contains "_ru" %}
-        {% assign lang = "ru" %}
-    {% elsif page.nav contains "_zh" %}
-        {% assign lang = "zh" %}
-    {% else %}
-        {% assign lang = "en" %}
-    {% endif %}
-    
     {% assign page_type = page.nav | remove: "_ru" | remove: "_zh" | remove: "_en" | remove: ".html" %}
     {% assign ru_switch = "/" | append: page_type | append:  "_ru.html" %}
     {% assign zh_switch = "/" | append: page_type | append:  "_zh.html" %}
     {% assign en_switch = "/" | append: page_type | append:  ".html" %}
-
 {% endif %}
 
 

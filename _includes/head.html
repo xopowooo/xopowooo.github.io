@@ -3,7 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" type="image/png" href={{ "/assets/favicon.png" | prepend: site.baseurl }} />
-    <title>{% if page.title %}{{ page.title | escape_once }}{% else %}{{ site.title | escape_once }}{% endif %}</title>
+    {% include lang_detect.html %}
+    <title>{% if page.title and page.title != "nil" %}{{ page.title | escape_once }}{% elsif page.nav != nil %}{{ site.title[lang] | escape_once }}{% else %}{{ site.title["en"] | escape_once }}{% endif %}</title>
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->

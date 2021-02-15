@@ -1,0 +1,65 @@
+
+<!-- {{ include.inner_lang }} -->
+<!-- {{ include.inner_date }} -->
+
+{% if include.inner_lang == "zh" %}
+    {% assign wekday = include.inner_date | date: "%a" %}
+    {% case wekday %}
+        {% when "Sun" %} {% assign wekday_str = "周日" %}    
+        {% when "Mon" %} {% assign wekday_str = "周一" %}
+        {% when "Tue" %} {% assign wekday_str = "周二" %}
+        {% when "Wed" %} {% assign wekday_str = "周三" %}
+        {% when "Thu" %} {% assign wekday_str = "周四" %}
+        {% when "Fri" %} {% assign wekday_str = "周五" %}
+        {% when "Sta" %} {% assign wekday_str = "周六" %}
+        {% else %} {% assign wekday_str = "??? wekday..." %}
+    {% endcase %}
+    {% assign day_str = include.inner_date | date: "%d" | append: "日" %}
+    {% assign mon_str = include.inner_date | date: "%m" | append: "月" %}
+    {% assign yer_str = include.inner_date | date: "%Y" | append: "年" %}
+    {% assign tim_str = include.inner_date | date: "%H:%M" %}
+
+    {% capture date_zh %}
+    {{yer_str}} {{mon_str}}{{day_str}} ({{wekday_str}}). {{tim_str}}
+    {% endcapture %}
+    {{ date_zh }}
+
+{% elsif include.inner_lang == "ru" %}
+    {% assign wekday = include.inner_date | date: "%a" %}
+    {% case wekday %}
+        {% when "Sun" %} {% assign wekday_str = "Вс" %}    
+        {% when "Mon" %} {% assign wekday_str = "Пн" %}
+        {% when "Tue" %} {% assign wekday_str = "Вт" %}
+        {% when "Wed" %} {% assign wekday_str = "Ср" %}
+        {% when "Thu" %} {% assign wekday_str = "Чт" %}
+        {% when "Fri" %} {% assign wekday_str = "Пт" %}
+        {% when "Sta" %} {% assign wekday_str = "Сб" %}
+    {% endcase %}
+    {% assign day_str = include.inner_date | date: "%d" %}
+    {% assign mon = include.inner_date | date: "%m" %}
+    {% case mon %}
+        {% when "01" %} {% assign mon_str = "Янв" %}
+        {% when "02" %} {% assign mon_str = "Фев" %}
+        {% when "03" %} {% assign mon_str = "Мар" %}
+        {% when "04" %} {% assign mon_str = "Апр" %}
+        {% when "05" %} {% assign mon_str = "Май" %}
+        {% when "06" %} {% assign mon_str = "Июн" %}
+        {% when "07" %} {% assign mon_str = "Июл" %}
+        {% when "08" %} {% assign mon_str = "Авг" %}
+        {% when "09" %} {% assign mon_str = "Сен" %}
+        {% when "10" %} {% assign mon_str = "Окт" %}
+        {% when "11" %} {% assign mon_str = "Ноя" %}
+        {% when "12" %} {% assign mon_str = "Дек" %}
+        {% else %} {% assign mon_str = "??? mon..." %}
+    {% endcase %}
+    {% assign yer_str = include.inner_date | date: "%Y" | append: " г." %}
+    {% assign tim_str = include.inner_date | date: "%H:%M" %}
+
+    {% capture date_ru %}
+    ({{wekday_str}}) {{day_str}} {{mon_str}}. {{yer_str}} {{tim_str}}
+    {% endcapture %}
+    {{ date_ru }}
+
+{% else %}
+    {{ include.inner_date | date: "%b %d (%a), %Y. %H:%M %p." }}
+{% endif %}

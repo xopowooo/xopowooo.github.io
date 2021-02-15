@@ -18,9 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Jiajia Li | Homepage
-title_ru: Ли Цзяцзя | Домашняя страница
-title_zh: 李佳佳 | 主页
+title:
+  en: Jiajia Li | Homepage
+  ru: Ли Цзяцзя | Домашняя страница
+  zh: 李佳佳 | 主页
 email: Jiajia.Li [at] student [dot] msu [dot] ru
 motto: для тебя хоть тысячу раз подряд.
 description: >- # this means to ignore newlines until "baseurl:"

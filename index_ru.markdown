@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "nil"
 nav: "index_ru.html"
 ---
 

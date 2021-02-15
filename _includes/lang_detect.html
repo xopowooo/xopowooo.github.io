@@ -1,0 +1,9 @@
+{% if page.nav != nil %}
+    {% if page.nav contains "_ru" %}
+        {% assign lang = "ru" %}
+    {% elsif page.nav contains "_zh" %}
+        {% assign lang = "zh" %}
+    {% else %}
+        {% assign lang = "en" %}
+    {% endif %}
+{% endif %}
